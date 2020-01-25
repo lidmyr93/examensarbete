@@ -1,0 +1,50 @@
+import styled from "styled-components";
+
+export const HeaderWrapper = styled.header`
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.2);
+`;
+
+export const StyledNav = styled.nav`
+  /* display: ${props => (props.open ? "flex" : "none")}; */
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+  background: orange;
+  transform: ${props => (props.open ? "translateX(0)" : "translateX(-100%)")};
+  @media screen and (min-width: 768px) {
+    position: initial;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 300px;
+    background: transparent;
+    transform: translateX(0);
+  }
+`;
+
+export const StyledLink = styled.a`
+  color: ${props => (props.active ? "blue" : "white")};
+  text-decoration: none;
+  font-size: 2em;
+
+  :hover {
+    color: lightblue;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+`;
