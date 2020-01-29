@@ -1,39 +1,38 @@
 import React from "react";
-import { TopHomeWrapper } from "./styles";
+
 import { content } from "../../content";
+
+import wrapperImage from "../../Images/metalwork.jpg";
+
+import { TopWrapper } from "./TopWrapper/TopWrapper";
+import { VisitWrapper } from "./VisitWrapper/VisitWrapper";
+import { ServicesWrapper } from "./Services/Services";
+import { PartnersWrapper } from "./Partners/Partners";
+import { ContactBanner } from "../../components/ContactBanner/ContactBanner";
 
 export const HomePage = () => {
   const {
     companyTitle,
-    homeBannerImage,
     homeBannerText,
     homeBannerSlogans,
-    homeBannerLink
+    homeBannerLink,
+    homePageVisit,
+    homePageServices
   } = content;
 
   return (
-    <TopHomeWrapper>
-      <div className="middle">
-        <h1>{companyTitle}</h1>
-        <h4>{homeBannerText}</h4>
-        <span>
-          <a href={`${Object.keys(homeBannerLink)}`}>
-            {homeBannerLink.services}
-          </a>
-        </span>
-      </div>
-
-      <div className="bottom">
-        {Object.entries(homeBannerSlogans).map(slogan => (
-          <div className="slogans" key={slogan[1].title}>
-            <span className="firstRow">
-              <span>ö</span>
-              <h3>{slogan[1].title}</h3>
-            </span>
-            <span className="secondRow">{slogan[1].text}</span>
-          </div>
-        ))}
-      </div>
-    </TopHomeWrapper>
+    <>
+      <TopWrapper
+        background={wrapperImage}
+        companyTitle={companyTitle}
+        homeBannerText={homeBannerText}
+        homeBannerSlogans={homeBannerSlogans}
+        homeBannerLink={homeBannerLink}
+      />
+      <VisitWrapper content={homePageVisit} image={wrapperImage} />
+      <ServicesWrapper content={homePageServices} />
+      <PartnersWrapper />
+      <ContactBanner />
+    </>
   );
 };

@@ -4,15 +4,20 @@ export const HeaderWrapper = styled.header`
   width: 100%;
   height: 10vh;
   display: flex;
-  position: relative;
+  position: ${props =>
+    props.currentPage === "home" ? "absolute" : "relative"};
   justify-content: flex-end;
-  background: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  background: ${props =>
+    props.currentPage === "home"
+      ? "rgba(0, 0, 0, 0.3)"
+      : `url(${props.background})`};
+
+  border-bottom: ${props =>
+    props.currentPage === "home" ? "none" : "5px solid blue"};
 `;
 
 export const StyledNav = styled.nav`
-  /* display: ${props => (props.open ? "flex" : "none")}; */
-  position: absolute;
-  z-index: 10;
   width: 100vw;
   height: 100vh;
   display: flex;
