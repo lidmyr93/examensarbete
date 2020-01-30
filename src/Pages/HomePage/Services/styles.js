@@ -12,18 +12,18 @@ export const Wrapper = styled.div`
     text-transform: uppercase;
   }
 
-  p {
+  .texts p {
     width: 80%;
-    margin: 0 auto;
     color: gray;
     line-height: 20px;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    margin: 0 auto;
   }
   @media screen and (min-width: 768px) {
     height: 60vh;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
 
     h1 {
       margin-bottom: 30px;
@@ -31,35 +31,5 @@ export const Wrapper = styled.div`
     p {
       width: 50%;
     }
-  }
-`;
-
-export const GridLayout = styled.div`
-  display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-columns: 50% 50%;
-  height: 60%;
-  @media screen and (min-width: 768px) {
-    width: 35%;
-  }
-`;
-
-export const IconTextAlign = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  svg {
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-  }
-
-  p {
-    font-size: 1.6rem;
-  }
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
   }
 `;

@@ -17,7 +17,7 @@ export const HomePage = () => {
     homeBannerSlogans,
     homeBannerLink,
     homePageVisit,
-    homePageServices
+    services
   } = content;
 
   return (
@@ -30,7 +30,7 @@ export const HomePage = () => {
         homeBannerLink={homeBannerLink}
       />
       <VisitWrapper content={homePageVisit} image={wrapperImage} />
-      <ServicesWrapper content={homePageServices} />
+      <ServicesWrapper content={services} />
       <PartnersWrapper />
       <ContactBanner />
     </>

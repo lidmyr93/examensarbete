@@ -18,6 +18,7 @@ ${props => console.log(props.visible)}
     background: rgba(97, 13, 181, 1);
   }
   @media screen and (min-width: 768px) {
-    display: ${props => (props.visible ? "none" : "flex")};
+    /* display: ${props => (props.visible ? "flex" : "none")}; */
+    display: flex;
   }
 `;

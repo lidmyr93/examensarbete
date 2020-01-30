@@ -41,15 +41,36 @@ export const content = {
       text: "Kontaka oss"
     }
   },
-  homePageServices: {
+  services: {
     title: "Våra tjänster",
+    secTitle: "Vad behöver du hjälp med?",
     text:
       "Vi utför slipning & polering av alla förekommande metaller samt mattborstningar och glasblästring av det mesta så som byggnadsbeslag och veterandelar även rikt-arbeten och vissa reparationer",
     icons: [
-      { text: "Polering", icon: "fa-beer" },
-      { text: "Kromning", icon: "fa-beer" },
-      { text: "Fälgar", icon: "fa-beer" },
-      { text: "Guldplätering", icon: "fa-beer" }
+      {
+        title: "Polering",
+        icon: "fa-beer",
+        text:
+          "Slipning och polering av järn, mässing, aluminium och koppar utföres till det krav kunden har på slutprodukten. Vi levererar era produkter med högsta kvalitet och finish."
+      },
+      {
+        title: "Kromning",
+        icon: "fa-beer",
+        text:
+          "Att kroma om detaljer till en bil, båt eller till verkstadsindustrin kräver oerhörd noggrannhet i underarbetet. Vi håller absolut toppklass under hela processen vilket resulterar i ett slutresultat i showklass."
+      },
+      {
+        title: "Fälgar",
+        icon: "fa-beer",
+        text:
+          "Vi åtar oss att polera era fälgar till en finish du bara ser på showbilar. En kromad fälg eller en aluminium fälg kan se blank ut men det är ingentig mot den finishen vi kommer upp till på dina fälgar. Kontakta oss för prisförslag."
+      },
+      {
+        title: "Guldplätering",
+        icon: "fa-beer",
+        text:
+          "Guldplätering utför vi med mycket höga krav på oss själva för det enastående resultat vi garanterar gentemot våra kunder. Vi levererar era produkter med högsta kvalitet och finish."
+      }
     ]
   },
 

@@ -1,6 +1,6 @@
 import React from "react";
-import { FaBeer } from "react-icons/fa";
-import { Wrapper, GridLayout, IconTextAlign } from "./styles";
+import { ServicesGrid } from "../../../components/ServicesGrid/ServicesGrid";
+import { Wrapper } from "./styles";
 export const ServicesWrapper = props => {
   const { title, text, icons } = props.content;
 
@@ -11,14 +11,7 @@ export const ServicesWrapper = props => {
         <p>{text}</p>
       </div>
 
-      <GridLayout>
-        {icons.map(icon => (
-          <IconTextAlign key={icon.text}>
-            <FaBeer />
-            <p>{icon.text}</p>
-          </IconTextAlign>
-        ))}
-      </GridLayout>
+      <ServicesGrid content={icons} />
     </Wrapper>
   );
 };
