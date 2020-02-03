@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledLink = styled.a`
-${props => console.log(props.width)}
-${props => console.log(props.visible)}
   width: ${props => (props.width ? props.width : "200px")};
   height: 50px;
   background: rgba(97, 135, 181, 1);

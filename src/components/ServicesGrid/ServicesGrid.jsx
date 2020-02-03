@@ -11,8 +11,8 @@ export const ServicesGrid = props => {
       columns={currentSlug === "services" ? "100%" : "50% 50%"}
       gridGap={gridGap}
     >
-      {content.map(icon => (
-        <IconContainer>
+      {content.map((icon, i) => (
+        <IconContainer key={i}>
           <IconTextAlign
             key={icon.title}
             size={currentSlug === "services" ? "50%" : "100%"}

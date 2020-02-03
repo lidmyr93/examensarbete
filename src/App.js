@@ -12,7 +12,7 @@ export const AppWrapper = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: lightgray;
+  background: white;
   width: 100vw;
   max-width: 100%;
   height: auto;

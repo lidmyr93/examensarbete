@@ -135,5 +135,17 @@ export const content = {
         text: "Hitta hit"
       }
     }
+  },
+
+  contactPage: {
+    title: "Kontakta oss idag",
+    phoneText: "Telefon",
+    phoneNumber: "Tel: 08-641 56 11",
+    emailText: "Email",
+    email: "info@metallsliperiet.se",
+    openHoursText: "Öppettider",
+    openHours: ["Mån - Tor 06.00-16.00", "Fredagar 06.00-13.00"],
+    secTitle: "Hitta till oss",
+    companyInfo: "Stockholms Metallsliperi AB - Vretvägen 3 - 142 34 Skogås"
   }
 };
