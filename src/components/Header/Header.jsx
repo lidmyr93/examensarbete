@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { HeaderWrapper, StyledLink, StyledNav } from "./styles";
+import { HeaderWrapper, StyledNav } from "./styles";
 import { MobileMenu } from "../mobile-menu/Mobile-Menu";
-import { getSlug } from "../../Utils/url";
 import wrapperImage from "../../Images/metalwork.jpg";
+import { NavLink, useLocation } from "react-router-dom";
 export const Header = props => {
   const { content: navlinks } = props;
   const [open, setOpen] = useState(false);
-  const currentSlug = getSlug();
+  const currentSlug = useLocation().pathname;
 
   return (
     <HeaderWrapper
       background={wrapperImage}
-      currentPage={currentSlug || "home"}
+      currentPage={currentSlug || "/home"}
     >
       <MobileMenu
         onClick={() => {
@@ -21,13 +21,10 @@ export const Header = props => {
       />
       <StyledNav open={open}>
         {Object.keys(navlinks).map((links, i) => (
-          <span key={i}>
-            <StyledLink
-              active={currentSlug === links ? true : false}
-              href={`/${links}`}
-            >
+          <span key={i} onClick={() => setOpen(!open)}>
+            <NavLink activeStyle={{ color: "lightblue" }} to={`/${links}`}>
               {navlinks[links]}
-            </StyledLink>
+            </NavLink>
           </span>
         ))}
       </StyledNav>

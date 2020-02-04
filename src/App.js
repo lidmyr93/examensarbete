@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled from "styled-components";
@@ -6,9 +6,10 @@ import { Header } from "./components/Header/Header";
 import { content } from "./content";
 import { HomePage } from "./Pages/HomePage/HomePage";
 import { About } from "./Pages/About/About";
-import { Services } from "./Pages/Services/Services";
+import Services from "./Pages/Services/Services";
 import { Contact } from "./Pages/Contact/Contact";
 import { Footer } from "./components/Footer/Footer";
+
 export const AppWrapper = styled.div`
   margin: 0;
   padding: 0;

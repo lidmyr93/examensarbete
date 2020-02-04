@@ -5,16 +5,16 @@ export const HeaderWrapper = styled.header`
   height: 10vh;
   display: flex;
   position: ${props =>
-    props.currentPage === "home" ? "absolute" : "relative"};
+    props.currentPage === "/home" ? "absolute" : "relative"};
   justify-content: flex-end;
   z-index: 10;
   background: ${props =>
-    props.currentPage === "home"
+    props.currentPage === "/home"
       ? "rgba(0, 0, 0, 0.3)"
       : `url(${props.background})`};
 
   border-bottom: ${props =>
-    props.currentPage === "home" ? "none" : "5px solid blue"};
+    props.currentPage === "/home" ? "none" : "5px solid blue"};
 `;
 
 export const StyledNav = styled.nav`
@@ -27,6 +27,15 @@ export const StyledNav = styled.nav`
   transition: all 0.3s linear;
   background: orange;
   transform: ${props => (props.open ? "translateX(0)" : "translateX(-100%)")};
+  color: ${props => (props.active === "true" ? "blue" : "white")};
+  a {
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    :hover {
+      color: lightblue;
+    }
+  }
   @media screen and (min-width: 768px) {
     position: initial;
     display: flex;
@@ -38,18 +47,9 @@ export const StyledNav = styled.nav`
     padding-right: 300px;
     background: transparent;
     transform: translateX(0);
-  }
-`;
 
-export const StyledLink = styled.a`
-  color: ${props => (props.active ? "blue" : "white")};
-  text-decoration: none;
-  font-size: 2em;
-
-  :hover {
-    color: lightblue;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 1.2rem;
+    a {
+      font-size: 1.2rem;
+    }
   }
 `;

@@ -19,8 +19,8 @@ export const About = () => {
       <AboutWrapper>
         <TextWrapper>
           <h1>{title}</h1>
-          {text.map(item => (
-            <p key={item.substring(1, 3)}>{item}</p>
+          {text.map((item, i) => (
+            <p key={i}>{item}</p>
           ))}
           <ButtonLink text={button.text} linkTo={button.link} visible={true} />
         </TextWrapper>

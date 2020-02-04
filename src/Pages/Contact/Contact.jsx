@@ -32,8 +32,8 @@ export const Contact = () => {
           </div>
           <div>
             <h5>{openHoursText}</h5>
-            {openHours.map(item => (
-              <p>{item}</p>
+            {openHours.map((item, i) => (
+              <p key={i}>{item}</p>
             ))}
           </div>
         </ContactInfo>

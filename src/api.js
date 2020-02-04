@@ -1,12 +1,20 @@
-const API_URL = `https://cdn.contentful.com `;
+import { createClient } from "contentful";
 
-const SPACE_ID = `hxzrkpn9wcyv`;
+var client = createClient({
+  space: `hxzrkpn9wcyv`,
+  accessToken: `UQrJ4wUkO0_luUL5ibOMFQRkP0GNVXtkUgkJH4Ki2no`
+});
 
-const ACCESS_TOKEN = "UQrJ4wUkO0_luUL5ibOMFQRkP0GNVXtkUgkJH4Ki2no";
-
-export const test = async () => {
-  const data = await fetch(
-    `${API_URL}/${SPACE_ID}/entries?access_token=${ACCESS_TOKEN}`
+export async function fetchPosts() {
+  const data = await client.getEntries({});
+  const posts = [];
+  data.items.map((item, i) =>
+    posts.push({
+      description: item.fields.photoDescription,
+      imgUrl: data.includes.Asset[i].fields.file.url,
+      imgTitle: data.includes.Asset[i].fields.title
+    })
   );
-  console.log(data);
-};
+
+  return posts;
+}
