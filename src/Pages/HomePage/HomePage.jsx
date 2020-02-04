@@ -9,6 +9,7 @@ import { VisitWrapper } from "./VisitWrapper/VisitWrapper";
 import { ServicesWrapper } from "./Services/Services";
 import { PartnersWrapper } from "./Partners/Partners";
 import { ContactBanner } from "../../components/ContactBanner/ContactBanner";
+import PostsIndex from "../../components/WorkPhotos/WorkPhotos";
 
 export const HomePage = () => {
   const {
@@ -33,6 +34,7 @@ export const HomePage = () => {
       <ServicesWrapper content={services} />
       <PartnersWrapper />
       <ContactBanner />
+      <PostsIndex />
     </>
   );
 };
