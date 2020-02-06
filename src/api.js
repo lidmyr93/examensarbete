@@ -11,8 +11,8 @@ export async function fetchPosts() {
   data.items.map((item, i) =>
     posts.push({
       description: item.fields.photoDescription,
-      imgUrl: data.includes.Asset[i].fields.file.url,
-      imgTitle: data.includes.Asset[i].fields.title
+      imgUrl: data.includes.Asset[1].fields.file.url,
+      imgTitle: data.includes.Asset[1].fields.title
     })
   );
 

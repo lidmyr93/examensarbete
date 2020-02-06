@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ServicesWrapper = styled.div`
-  height: 150vh;
+  height: auto;
   width: 90%;
   margin: 0 auto;
 
@@ -12,9 +12,23 @@ export const ServicesWrapper = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    height: 70vh;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+`;
+
+export const Wrapper = styled.div`
+  padding: 0 10%;
+  .loader {
+    text-align: center;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    .loader {
+      margin-top: 100px;
+    }
   }
 `;
