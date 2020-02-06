@@ -1,17 +1,124 @@
 .Modal {
   position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  background-color: papayawhip;
+  top: 10%;
+  left: 20px;
+  right: 20px;
+  bottom: 5%;
+  background-color: #fff;
+  overflow-y: scroll;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 5px auto;
+}
+.close {
+  position: relative;
+  background: gray;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close:hover {
+  background: black;
+}
+.close div {
+  width: 5px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+}
+.close :first-child {
+  transform: rotate(45deg);
+}
+.close :last-child {
+  transform: rotate(-45deg);
+}
+.modalTitle {
+  margin: 0;
+  font-size: 2.5em;
+}
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modalText {
+  color: black;
+  overflow-y: scroll;
+  padding: 5%;
+  margin: 0;
+}
 .Overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rebeccapurple;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+}
+
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .Modal {
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    bottom: 20%;
+  }
+  .Overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .Modal::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+
+  .Modal::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f5;
+  }
+
+  .Modal::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #000;
+  }
+  .row {
+    justify-content: flex-start;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .close {
+    order: 1;
+    margin: 1%;
+  }
+  .modalTitle {
+    order: 2;
+    margin-left: 47%;
+  }
+
+  .modalImg {
+    width: 600px;
+    height: auto;
+  }
+  .modalText {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    overflow-y: hidden;
+  }
 }

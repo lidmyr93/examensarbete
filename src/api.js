@@ -6,15 +6,15 @@ var client = createClient({
 });
 
 export async function fetchPosts() {
-  const data = await client.getEntries({});
+  const data = await client.getEntries();
   const posts = [];
-  data.items.map((item, i) =>
+  data.items.map((item, i) => {
     posts.push({
       description: item.fields.photoDescription,
-      imgUrl: data.includes.Asset[1].fields.file.url,
-      imgTitle: data.includes.Asset[1].fields.title
-    })
-  );
+      imgUrl: `https://${item.fields.photo.fields.file.url}`,
+      imgTitle: item.fields.photo.fields.title
+    });
+  });
 
   return posts;
 }
