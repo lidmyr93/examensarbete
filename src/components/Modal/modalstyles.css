@@ -9,13 +9,15 @@
 }
 
 .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: 5px auto;
+  padding: 0 5%;
 }
 .close {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.closeButton {
   position: relative;
   background: gray;
   width: 2.5em;
@@ -24,20 +26,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px;
 }
-.close:hover {
+.closeButton:hover {
   background: black;
 }
-.close div {
+.closeButton div {
   width: 5px;
   height: 20px;
   background: #fff;
   position: absolute;
 }
-.close :first-child {
+.closeButton :first-child {
   transform: rotate(45deg);
 }
-.close :last-child {
+.closeButton :last-child {
   transform: rotate(-45deg);
 }
 .modalTitle {
@@ -53,7 +56,6 @@
 .modalText {
   color: black;
   overflow-y: scroll;
-  padding: 5%;
   margin: 0;
 }
 .Overlay {
@@ -98,18 +100,24 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #000;
   }
+  .content {
+    display: flex;
+  }
+  .imageContainer {
+    width: 40%;
+  }
   .row {
     justify-content: flex-start;
     margin: 0;
     margin-bottom: 15px;
+    width: 60%;
+    padding: 0;
   }
   .close {
     order: 1;
     margin: 1%;
   }
   .modalTitle {
-    order: 2;
-    margin-left: 47%;
   }
 
   .modalImg {

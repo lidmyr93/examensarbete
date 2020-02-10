@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
+  ${props => console.log(props.currentPage)}
   width: 100%;
   height: 10vh;
   display: flex;
-  position: ${props =>
-    props.currentPage === "/home" ? "absolute" : "relative"};
+  position: ${props => (props.currentPage === "/" ? "absolute" : "relative")};
   justify-content: flex-end;
   z-index: 10;
   background: ${props =>
-    props.currentPage === "/home"
+    props.currentPage === "/"
       ? "rgba(0, 0, 0, 0.3)"
       : `url(${props.background})`};
-
+  background-repeat: no-repeat;
+  background-size: cover;
   border-bottom: ${props =>
-    props.currentPage === "/home" ? "none" : "5px solid blue"};
+    props.currentPage === "/" ? "none" : "5px solid blue"};
 `;
 
 export const StyledNav = styled.nav`

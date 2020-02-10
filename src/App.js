@@ -29,8 +29,7 @@ function App() {
       <AppWrapper>
         <Header content={content.nav} />
         <MainContent>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/home" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
           <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact" component={Contact} />

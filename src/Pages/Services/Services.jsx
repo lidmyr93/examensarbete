@@ -23,6 +23,9 @@ class Services extends React.Component {
     if (posts.length === 0) {
       loadPosts();
     }
+    if (posts) {
+      this.setState({ isLoading: false });
+    }
   }
   componentDidUpdate(prevProps) {
     if (prevProps.posts !== this.props.posts) {

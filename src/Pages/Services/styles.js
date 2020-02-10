@@ -12,7 +12,6 @@ export const ServicesWrapper = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;

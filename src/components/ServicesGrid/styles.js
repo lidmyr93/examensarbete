@@ -7,6 +7,7 @@ export const GridLayout = styled.div`
   height: 60%;
   @media screen and (min-width: 768px) {
     width: 70%;
+    height: ${props => props.height};
     grid-template-columns: 1fr 1fr;
     gap: ${props => (props.gridGap ? "50px 100px" : "0")};
   }
@@ -23,7 +24,6 @@ export const IconContainer = styled.div`
     margin: 0;
     text-align: center;
     color: #2f2e2e;
-    line-height: 20px;
     font-size: 1.2rem;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -51,7 +51,6 @@ export const IconTextAlign = styled.div`
     margin: 5px auto;
   }
   p {
-    fo
   }
 
   @media screen and (min-width: 768px) {

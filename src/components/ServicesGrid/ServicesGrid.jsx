@@ -10,6 +10,7 @@ export const ServicesGrid = props => {
     <GridLayout
       columns={currentSlug === "/services" ? "100%" : "50% 50%"}
       gridGap={gridGap}
+      height={currentSlug === "/services" ? "70vh" : "60%"}
     >
       {content.map((icon, i) => (
         <IconContainer key={i}>

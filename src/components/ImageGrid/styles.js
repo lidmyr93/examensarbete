@@ -4,11 +4,10 @@ export const ImageGridWrapper = styled.div`
   margin-bottom: 10px;
 
   @media screen and (min-width: 768px) {
-    width: 70vw;
-    margin: 20px auto;
+    width: 100%;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
   }
 `;
 

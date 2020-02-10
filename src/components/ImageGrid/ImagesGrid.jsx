@@ -13,6 +13,7 @@ function ImagesGrid(props) {
       setRenderShowMore(false);
     }
   }, [device, data.length]);
+
   const onLoadMore = () => {
     setLimit(prevState => prevState + 3);
   };
@@ -28,7 +29,12 @@ function ImagesGrid(props) {
     <ImageGridWrapper>
       {renderImage()}
       {renderShowMore && (
-        <StyledButton onClick={onLoadMore}>Visa mer</StyledButton>
+        <StyledButton
+          onClick={onLoadMore}
+          disabled={limit >= data.length ? true : false}
+        >
+          Visa mer
+        </StyledButton>
       )}
     </ImageGridWrapper>
   );
