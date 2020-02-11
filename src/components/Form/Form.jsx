@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+
 import { StyledForm } from "./styles";
+import { db } from "../../firebase.config";
+import { useEffect } from "react";
+import axios from "axios";
 export const ContactForm = props => {
   const [state, setState] = useState({
     name: "",
@@ -17,8 +21,26 @@ export const ContactForm = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("sent", state);
+
+    const data = {
+      name: state.name,
+      email: state.email,
+      message: state.message
+    };
+    console.log(data);
+    axios
+      .post(
+        "https://europe-west1-sthml-metall.cloudfunctions.net/submitEurope",
+        data
+      )
+      .then(res => {
+        return db.ref("messages").push(data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   };
+  const saveMessage = () => {};
   return (
     <StyledForm onSubmit={handleSubmit}>
       <input
