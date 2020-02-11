@@ -5,12 +5,6 @@ export const ContactWrapper = styled.div`
   text-align: center;
   text-transform: uppercase;
   background: white;
-  h1 {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-    margin-top: 0;
-    padding-top: 20px;
-  }
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -18,9 +12,6 @@ export const ContactWrapper = styled.div`
     justify-content: space-evenly;
     height: 50vh;
     padding: 30px 0;
-    h1 {
-      width: 100%;
-    }
   }
 `;
 
@@ -32,15 +23,23 @@ export const ContactInfo = styled.div`
   h5 {
     margin: 0;
     color: #0c4d9c;
+    font-size: 1.1em;
   }
   p {
     margin: 0;
     color: #605e5e;
+    font-size: 0.9em;
   }
   div {
     margin-bottom: 30px;
   }
   @media screen and (min-width: 768px) {
+    h5 {
+      font-size: 1.3em;
+    }
+    p {
+      font-size: 1em;
+    }
   }
 `;
 
@@ -49,12 +48,7 @@ export const MapContainer = styled.div`
   padding: 0 10%;
   background: #eeefe4;
   padding-bottom: 20px;
-  h1 {
-    margin-top: 0;
-    padding-top: 20px;
-    text-transform: uppercase;
-    color: #2f2e2e;
-  }
+
   p {
     font-size: 1.2em;
     color: #605e5e;

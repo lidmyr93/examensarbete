@@ -10,7 +10,16 @@ import { About } from "./Pages/About/About";
 import Services from "./Pages/Services/Services";
 import { Contact } from "./Pages/Contact/Contact";
 import { Footer } from "./components/Footer/Footer";
-
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faClock,
+  faPhoneAlt,
+  faCog,
+  faBrush
+} from "@fortawesome/free-solid-svg-icons";
+library.add(fab, faEnvelope, faClock, faPhoneAlt, faCog, faBrush);
 export const AppWrapper = styled.div`
   margin: 0;
   padding: 0;

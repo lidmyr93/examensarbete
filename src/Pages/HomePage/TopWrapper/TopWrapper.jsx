@@ -1,7 +1,8 @@
 import React from "react";
 import { TopHomeWrapper } from "./styles";
 import { ButtonLink } from "../../../components/ButtonLink/ButtonLink";
-import { FaBeer, FaAccessibleIcon } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { H1 } from "../../../globalStyles/globalStyles";
 
 export const TopWrapper = props => {
   const {
@@ -14,9 +15,17 @@ export const TopWrapper = props => {
   return (
     <TopHomeWrapper background={background}>
       <div className="middle">
-        <h1>{companyTitle}</h1>
-        <h4>{homeBannerText}</h4>
-        <ButtonLink linkTo={homeBannerLink.link} text={homeBannerLink.text} />
+        <H1 fontSize="2" color="#fff" padding="0 0 30px 0" width="100%">
+          {companyTitle}
+        </H1>
+        <H1 color="#fff" fontSize="1.3" padding="0 0 30px 0" width="100%">
+          {homeBannerText}
+        </H1>
+        <ButtonLink
+          linkTo={homeBannerLink.link}
+          text={homeBannerLink.text}
+          borderRadius="5px"
+        />
       </div>
 
       <div className="bottom">
@@ -24,7 +33,7 @@ export const TopWrapper = props => {
           <div className="slogans" key={slogan[1].title}>
             <span className="firstRow">
               <span className="icon">
-                <FaBeer />
+                <FontAwesomeIcon icon={slogan[1].logo} />
               </span>
               <h3>{slogan[1].title}</h3>
             </span>

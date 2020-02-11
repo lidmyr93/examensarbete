@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import * as actionCreators from "../../actions/actions";
 import { Loading } from "../../components/Loading/Loading";
 import MyModal from "../../components/Modal/Modal";
+import { H1 } from "../../globalStyles/globalStyles";
 
 class Services extends React.Component {
   constructor(props) {
@@ -45,7 +46,9 @@ class Services extends React.Component {
       <>
         <Wrapper>
           <ServicesWrapper>
-            <h1>{services.secTitle}</h1>
+            <H1 width="100%" margin="30px auto 40px auto">
+              {services.secTitle}
+            </H1>
             <ServicesGrid content={services.icons} gridGap={true} />
           </ServicesWrapper>
 

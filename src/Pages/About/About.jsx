@@ -5,6 +5,7 @@ import { ContactBanner } from "../../components/ContactBanner/ContactBanner";
 import { ButtonLink } from "../../components/ButtonLink/ButtonLink";
 import { LinkImage } from "../../components/LinkImage/LinkImage";
 import wrapperImage from "../../Images/metalwork.jpg";
+import { H1 } from "../../globalStyles/globalStyles";
 export const About = () => {
   const {
     title,
@@ -18,11 +19,18 @@ export const About = () => {
     <>
       <AboutWrapper>
         <TextWrapper>
-          <h1>{title}</h1>
+          <H1 width="100%" align="left">
+            {title}
+          </H1>
           {text.map((item, i) => (
             <p key={i}>{item}</p>
           ))}
-          <ButtonLink text={button.text} linkTo={button.link} visible={true} />
+          <ButtonLink
+            text={button.text}
+            linkTo={button.link}
+            visible={true}
+            borderRadius="5px"
+          />
         </TextWrapper>
 
         <ImageWrapper>

@@ -3,7 +3,8 @@ import React from "react";
 import { content } from "../../content";
 import { FaBeer } from "react-icons/fa";
 import { Wrapper } from "./styles";
-import { icons } from "react-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const ContactBanner = () => {
   const { contactBanner } = content;
 
@@ -12,7 +13,7 @@ export const ContactBanner = () => {
       {contactBanner.map(item => (
         <div className="wrapperItem" key={item.title}>
           <div className="row">
-            <FaBeer />
+            <FontAwesomeIcon icon={item.icon} />
             <h5>{item.title}</h5>
           </div>
 

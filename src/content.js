@@ -14,18 +14,18 @@ export const content = {
   homeBannerText: "Gedigen erfarenhet av alla typer av ytbehandling sedan 1987",
   homeBannerSlogans: {
     first: {
-      logo: "watch",
+      logo: "clock",
       title: "Aktiva sedan 1987",
       text: "Vilket betder en omfattande yrkeskunskap i vår branch."
     },
     second: {
-      logo: "settings",
+      logo: "cog",
       title: "Komplett maskinpark",
       text:
         "Vi utför slipning & Högglanspolering, Mattborstning, Glasblästring, Riktningar samt vissa reparationer."
     },
     third: {
-      logo: "polishing",
+      logo: "brush",
       title: "All typ av ytbehandling",
       text:
         "Blankförkromning, Förkoppring, Förnickling och förgyllning i 24 karat."
@@ -49,25 +49,25 @@ export const content = {
     icons: [
       {
         title: "Polering",
-        icon: "fa-beer",
+        icon: "polishing",
         text:
           "Slipning och polering av järn, mässing, aluminium och koppar utföres till det krav kunden har på slutprodukten. Vi levererar era produkter med högsta kvalitet och finish."
       },
       {
         title: "Kromning",
-        icon: "fa-beer",
+        icon: "chromium",
         text:
           "Att kroma om detaljer till en bil, båt eller till verkstadsindustrin kräver oerhörd noggrannhet i underarbetet. Vi håller absolut toppklass under hela processen vilket resulterar i ett slutresultat i showklass."
       },
       {
         title: "Fälgar",
-        icon: "fa-beer",
+        icon: "rim",
         text:
           "Vi åtar oss att polera era fälgar till en finish du bara ser på showbilar. En kromad fälg eller en aluminium fälg kan se blank ut men det är ingentig mot den finishen vi kommer upp till på dina fälgar. Kontakta oss för prisförslag."
       },
       {
         title: "Guldplätering",
-        icon: "fa-beer",
+        icon: "gold",
         text:
           "Guldplätering utför vi med mycket höga krav på oss själva för det enastående resultat vi garanterar gentemot våra kunder. Vi levererar era produkter med högsta kvalitet och finish."
       }
@@ -76,17 +76,17 @@ export const content = {
 
   contactBanner: [
     {
-      icon: "phone",
+      icon: "phone-alt",
       title: "Ring oss",
       text: "Tel: 08-641 56 11"
     },
     {
-      icon: "mail",
+      icon: "envelope",
       title: "Maila oss",
       text: "info@metallsliperiet.se"
     },
     {
-      icon: "watch",
+      icon: "clock",
       title: "Öppettider",
       text: "Måndag-torsdag 06.00-16.00",
       sectext: "Fredagar 06.00-13.00"

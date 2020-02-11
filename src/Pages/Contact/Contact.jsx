@@ -3,6 +3,7 @@ import { ContactBanner } from "../../components/ContactBanner/ContactBanner";
 import { content } from "../../content";
 import { ContactForm } from "../../components/Form/Form";
 import { ContactWrapper, ContactInfo, MapContainer } from "./styles";
+import { H1 } from "../../globalStyles/globalStyles";
 
 export const Contact = () => {
   const {
@@ -20,7 +21,9 @@ export const Contact = () => {
   return (
     <>
       <ContactWrapper>
-        <h1>{title}</h1>
+        <H1 width="100%" margin="0 0 30px 0" padding="20px 0 0 0">
+          {title}
+        </H1>
         <ContactInfo>
           <div>
             <h5>{phoneText}</h5>
@@ -40,7 +43,9 @@ export const Contact = () => {
         <ContactForm />
       </ContactWrapper>
       <MapContainer>
-        <h1>{secTitle}</h1>
+        <H1 margin="0 0 20px 0" width="100%">
+          {secTitle}
+        </H1>
         <p>{companyInfo}</p>
         <div className="fakemap"></div>
       </MapContainer>

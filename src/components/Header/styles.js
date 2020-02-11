@@ -10,12 +10,16 @@ export const HeaderWrapper = styled.header`
   z-index: 10;
   background: ${props =>
     props.currentPage === "/"
-      ? "rgba(0, 0, 0, 0.3)"
+      ? "rgba(42, 42, 42, 0.7)"
       : `url(${props.background})`};
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: ${props =>
     props.currentPage === "/" ? "none" : "5px solid blue"};
+
+  -webkit-box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.66);
+  box-shadow: 3px 10px 8px 0px rgba(0, 0, 0, 0.6);
 `;
 
 export const StyledNav = styled.nav`

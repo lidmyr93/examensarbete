@@ -5,12 +5,6 @@ export const ServicesWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
 
-  h1 {
-    width: 80%;
-    text-align: center;
-    margin: 30px auto 40px auto;
-  }
-
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;

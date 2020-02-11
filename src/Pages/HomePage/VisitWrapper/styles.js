@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   background: white;
   height: 50vh;
   width: 100%;
-  padding: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

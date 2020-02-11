@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
     /* height: calc((50vh / 3) - 5vh); */
     display: flex;
     justify-content: flex-start;
+    width: auto;
   }
   .column {
     display: flex;
@@ -20,8 +21,8 @@ export const Wrapper = styled.div`
     margin-left: 60px;
   }
   svg {
-    width: 50px;
-    height: 50px;
+    width: 30px !important;
+    height: 30px !important;
     margin-right: 10px;
     align-self: center;
     color: white;
@@ -29,10 +30,11 @@ export const Wrapper = styled.div`
   }
 
   h5 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: auto 0;
     color: white;
     font-weight: normal;
+    text-transform: uppercase;
   }
 
   p {
@@ -45,24 +47,37 @@ export const Wrapper = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 0;
 
     .wrapperItem {
       height: 60%;
-      padding: 0 100px;
+      width: 25%;
+      padding: 0 10px 0 10px;
       border-right: 1px solid white;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       :last-child {
         border: none;
       }
     }
 
+    .row {
+      justify-content: center;
+    }
+    h5 {
+      font-size: 1.3rem;
+    }
     svg {
-      width: 30px;
-      height: 30px;
+      width: 25px !important;
+      height: 25px !important;
     }
     .column {
-      margin: 10px 0 0 0;
+      margin: 0 0 0 0;
+      height: 40%;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;

@@ -18,33 +18,19 @@ export const TopHomeWrapper = styled.div`
     align-items: center;
     justify-content: center;
     color: white;
-    h1 {
-      font-size: 2.3rem;
-      text-align: center;
-      margin: 0;
-      padding-bottom: 30px;
-    }
-    h4 {
-      font-size: 1.5rem;
-      text-align: center;
-      margin: 0;
-      padding-bottom: 30px;
-    }
   }
 
   @media screen and (min-width: 768px) {
     .middle {
       height: 80%;
-      h1 {
-        font-size: 4rem;
-      }
+
       h4 {
         font-size: 2rem;
       }
     }
   }
   .bottom {
-    background: black;
+    background: #2f2e2e;
     color: white;
     width: 100%;
     height: 50%;
@@ -61,8 +47,9 @@ export const TopHomeWrapper = styled.div`
     .firstRow {
       display: flex;
       justify-content: center;
+      width: 100%;
       h3 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin: 0;
         color: white;
       }
@@ -72,10 +59,14 @@ export const TopHomeWrapper = styled.div`
     display: flex;
     align-items: center;
     margin-right: 10px;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
   .secondRow {
     font-size: 1.2rem;
-    color: gray;
+    color: #a0a09f;
     padding-top: 10px;
     text-align: center;
   }
@@ -106,6 +97,12 @@ export const TopHomeWrapper = styled.div`
       }
       :last-child {
         border: none;
+      }
+    }
+    .icon {
+      svg {
+        width: 25px;
+        height: 25px;
       }
     }
 

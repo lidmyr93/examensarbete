@@ -1,16 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background: beige;
+  background: #eeefe4;
   height: 80vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  h1 {
-    text-transform: uppercase;
-  }
 
   .texts p {
     width: 80%;

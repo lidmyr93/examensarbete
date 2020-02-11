@@ -25,7 +25,7 @@ export const TextWrapper = styled.div`
     margin: 10px;
   }
   @media screen and (min-width: 768px) {
-    height: 50%;
+    height: 60%;
     width: 50%;
     align-items: flex-start;
     p:nth-child(3) {

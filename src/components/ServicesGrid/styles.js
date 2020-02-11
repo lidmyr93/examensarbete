@@ -45,10 +45,9 @@ export const IconTextAlign = styled.div`
   width: ${props => props.size};
   height: auto;
   text-align: center;
-  svg {
+  img {
     width: 75px;
     height: 75px;
-    margin: 5px auto;
   }
   p {
   }
@@ -58,7 +57,7 @@ export const IconTextAlign = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    svg {
+    img {
       width: 100px;
       height: 100px;
       margin: 0;

@@ -9,14 +9,15 @@ export const StyledLink = styled.a`
   display: ${props => (props.visible ? "none" : "flex")};
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: ${props =>
+    props.borderRadius || !props.visble ? "5px" : "0px"};
   text-transform: uppercase;
-
+  font-weight: bold;
   :hover {
-    background: rgba(97, 13, 181, 1);
+    background: rgba(42, 89, 135, 1);
   }
   @media screen and (min-width: 768px) {
-    /* display: ${props => (props.visible ? "flex" : "none")}; */
     display: flex;
+    border-radius: ${props => props.borderRadius || "0"};
   }
 `;
