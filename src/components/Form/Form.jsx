@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 
-import { StyledForm } from "./styles";
+import { StyledForm, EmailConfirmation } from "./styles";
 import { db } from "../../firebase.config";
 import { useEffect } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const ContactForm = props => {
   const [state, setState] = useState({
     name: "",
     email: "",
     message: ""
   });
-
+  const [mailSent, setMailSent] = useState(false);
   const handleChange = e => {
     const { name, value } = e.target;
     setState(prevState => ({
@@ -27,21 +28,21 @@ export const ContactForm = props => {
       email: state.email,
       message: state.message
     };
-    console.log(data);
     axios
       .post(
         "https://europe-west1-sthml-metall.cloudfunctions.net/submitEurope",
         data
       )
       .then(res => {
+        setMailSent(true);
         return db.ref("messages").push(data);
       })
       .catch(error => {
         console.log(error);
       });
   };
-  const saveMessage = () => {};
-  return (
+
+  return !mailSent ? (
     <StyledForm onSubmit={handleSubmit}>
       <input
         type="text"
@@ -69,5 +70,10 @@ export const ContactForm = props => {
 
       <input type="submit" />
     </StyledForm>
+  ) : (
+    <EmailConfirmation>
+      <p>Tack för ditt mail</p>
+      <FontAwesomeIcon icon="check" size="4x" color="green" />
+    </EmailConfirmation>
   );
 };

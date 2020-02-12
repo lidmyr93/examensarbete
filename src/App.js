@@ -17,9 +17,10 @@ import {
   faClock,
   faPhoneAlt,
   faCog,
-  faBrush
+  faBrush,
+  faCheck
 } from "@fortawesome/free-solid-svg-icons";
-library.add(fab, faEnvelope, faClock, faPhoneAlt, faCog, faBrush);
+library.add(fab, faEnvelope, faClock, faPhoneAlt, faCog, faBrush, faCheck);
 export const AppWrapper = styled.div`
   margin: 0;
   padding: 0;
@@ -29,6 +30,8 @@ export const AppWrapper = styled.div`
   max-width: 100%;
   height: auto;
   position: relative;
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+  font-family: "Roboto Condensed", sans-serif;
 `;
 
 export const MainContent = styled.div``;
