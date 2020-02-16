@@ -14,6 +14,7 @@ export async function fetchPosts() {
       imgUrl: `https://${item.fields.photo.fields.file.url}`,
       imgTitle: item.fields.photo.fields.title
     });
+    return null;
   });
 
   return posts;

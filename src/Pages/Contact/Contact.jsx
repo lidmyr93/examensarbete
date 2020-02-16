@@ -4,6 +4,7 @@ import { content } from "../../content";
 import { ContactForm } from "../../components/Form/Form";
 import { ContactWrapper, ContactInfo, MapContainer } from "./styles";
 import { H1 } from "../../globalStyles/globalStyles";
+import GoogleMap from "../../components/Map/Map";
 
 export const Contact = () => {
   const {
@@ -47,7 +48,7 @@ export const Contact = () => {
           {secTitle}
         </H1>
         <p>{companyInfo}</p>
-        <div className="fakemap"></div>
+        <GoogleMap />
       </MapContainer>
       <ContactBanner />
     </>

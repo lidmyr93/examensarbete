@@ -29,7 +29,7 @@
     "redux": "^4.0.5",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^5.0.0"
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -53,7 +53,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.8.3"
+    "@babel/preset-react": "^7.8.3",
+    "babel-plugin-styled-components": "^1.10.7"
   },
   "babel": {
     "presets": [
@@ -61,7 +62,8 @@
       "@babel/preset-env"
     ],
     "plugins": [
-      "emotion"
+      "emotion",
+      "babel-plugin-styled-components"
     ]
   }
 }

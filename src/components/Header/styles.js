@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  ${props => console.log(props.currentPage)}
   width: 100%;
   height: 10vh;
   display: flex;
   position: ${props => (props.currentPage === "/" ? "absolute" : "relative")};
-  justify-content: flex-end;
+  justify-content: center;
   z-index: 10;
   background: ${props =>
     props.currentPage === "/"
@@ -30,9 +29,10 @@ export const StyledNav = styled.nav`
   justify-content: center;
   align-items: center;
   transition: all 0.3s linear;
-  background: orange;
+  background: black;
   transform: ${props => (props.open ? "translateX(0)" : "translateX(-100%)")};
   color: ${props => (props.active === "true" ? "blue" : "white")};
+  overflow: hidden;
   a {
     text-decoration: none;
     font-size: 2em;
@@ -49,7 +49,6 @@ export const StyledNav = styled.nav`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding-right: 300px;
     background: transparent;
     transform: translateX(0);
 

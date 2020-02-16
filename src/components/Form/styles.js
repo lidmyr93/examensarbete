@@ -30,8 +30,14 @@ export const StyledForm = styled.form`
     resize: none;
     overflow-y: scroll;
     font-family: helvetica;
+    ::-webkit-scrollbar {
+      width: 0px; /* Remove scrollbar space */
+      background: transparent; /* Optional: just make scrollbar invisible */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ff0000;
+    }
   }
-
   input[type="submit"] {
     width: 20%;
     height: 30px;

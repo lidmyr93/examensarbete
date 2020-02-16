@@ -1,7 +1,6 @@
 import React from "react";
 
 import { content } from "../../content";
-import { FaBeer } from "react-icons/fa";
 import { Wrapper } from "./styles";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

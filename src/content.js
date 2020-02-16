@@ -16,7 +16,7 @@ export const content = {
     first: {
       logo: "clock",
       title: "Aktiva sedan 1987",
-      text: "Vilket betder en omfattande yrkeskunskap i vår branch."
+      text: "Vilket betyder en omfattande yrkeskunskap i vår branch."
     },
     second: {
       logo: "cog",

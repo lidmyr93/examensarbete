@@ -1,12 +1,11 @@
 import React from "react";
-import { FaBeer } from "react-icons/fa";
 import { GridLayout, IconTextAlign, IconContainer } from "./styles";
 import { useLocation } from "react-router-dom";
 import chromium from "../../Images/chromium.svg";
 import gold from "../../Images/gold.svg";
 import polishing from "../../Images/polishing.svg";
 import rim from "../../Images/rim.svg";
-import { useEffect } from "react";
+
 export const ServicesGrid = props => {
   const { content, gridGap } = props;
   const currentSlug = useLocation().pathname;
@@ -24,7 +23,7 @@ export const ServicesGrid = props => {
             key={icon.title}
             size={currentSlug === "/services" ? "50%" : "100%"}
           >
-            <img src={images[i]} />
+            <img src={images[i]} alt={icon.title} />
             <p>{icon.title}</p>
           </IconTextAlign>
           {currentSlug === "/services" && (

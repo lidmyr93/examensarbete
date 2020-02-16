@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import { StyledForm, EmailConfirmation } from "./styles";
 import { db } from "../../firebase.config";
-import { useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const ContactForm = props => {
@@ -23,22 +22,21 @@ export const ContactForm = props => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    const data = {
-      name: state.name,
-      email: state.email,
-      message: state.message
-    };
     axios
       .post(
         "https://europe-west1-sthml-metall.cloudfunctions.net/submitEurope",
-        data
+        state
       )
       .then(res => {
-        setMailSent(true);
-        return db.ref("messages").push(data);
+        if (res.status === 200) {
+          setMailSent(true);
+          return db.ref("messages").push(state);
+        } else {
+          throw new Error("Something went wrong with the email service");
+        }
       })
       .catch(error => {
-        console.log(error);
+        console.error(error);
       });
   };
 
